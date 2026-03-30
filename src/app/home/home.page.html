@@ -1,0 +1,69 @@
+<ion-app>
+  <!-- Side Menu for Navigation -->
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Quiz Quest</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-item class="lb-btn">
+        <ion-label class="view-leaderboard" routerLink="/leaderboard">
+          <ion-icon name="trophy" slot="start"></ion-icon>
+          View Leaderboard
+        </ion-label>
+      </ion-item>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Main Header for the App -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Quiz Quest</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Main Content -->
+  <ion-content>
+    <div class="quiz-container" id="main-content">
+      <h1>Quiz <span>Quest</span></h1>
+
+      <!-- Button to Start Quiz if Not Started -->
+      <div *ngIf="!isQuizStarted">
+        <p class="paragraph-message">It's time to test your knowledge! Let's play and have some fun!</p>
+        <ion-button class="start-btn" (click)="showCategorySelection()">Get Started</ion-button>
+      </div>
+
+      <!-- Category Selection when Required -->
+      <div *ngIf="showCategories" >
+        <ion-list class="categ-list">
+          <h3 class="categ-header">Category</h3>
+          <ion-item>
+            <ion-button class="categ-btn" expand="block" (click)="startQuiz('Programming')">Programming</ion-button>
+            <ion-button class="categ-btn" expand="block" (click)="startQuiz('History')">History</ion-button>
+            <ion-button class="categ-btn" expand="block" (click)="startQuiz('Science')">Science</ion-button>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <!-- Main Quiz Section, Visible When Quiz Has Started -->
+      <div *ngIf="isQuizStarted">
+        <div *ngIf="currentQuestions.length > 0" class="question-container">
+            <ion-list class="quiz-list">
+                <ion-item class="questions">
+                  <h3>{{ currentQuestions[currentQuestionIndex].question }}</h3>
+                </ion-item>
+                <ion-item *ngFor="let option of currentQuestions[currentQuestionIndex].options" (click)="answerQuestion(option)">
+                  <ion-radio class="quiz-radio" slot="start" value="{{ option }}"></ion-radio>
+                  <ion-label class="label-radio">{{ option }} </ion-label>
+                </ion-item>
+            </ion-list>
+          <div class="timer">{{ timer }} seconds left</div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-app>

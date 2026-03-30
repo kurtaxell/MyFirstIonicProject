@@ -1,0 +1,31 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-button class="back-button" labelPlacement="start" fill="clear" routerLink="/home" >
+        <ion-icon name="chevron-back" slot="start"></ion-icon>
+      </ion-button>
+      <ion-title>Leaderboard</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+
+  <h1>Quiz <span>Quest</span></h1>
+  
+    <ion-list class="lb-list ion-padding" >
+      <!-- Leaderboard Section - Shown if quiz has not started and leaderboard has entries -->
+      <h3 class="lb-header">Leaderboard</h3>
+      <div class="name-score" *ngIf="!isQuizStarted && leaderboard.length > 0">
+        <ion-item>
+          <ion-label class="user-header">NAME</ion-label>
+          <ion-label class="user-header">SCORE</ion-label>
+        </ion-item>
+        <!-- Iterate over leaderboard entries -->
+        <ion-item *ngFor="let entry of leaderboard">
+          <ion-label class="user-records">{{ entry.name }}</ion-label>
+          <ion-label class="user-records">{{ entry.score }}</ion-label>
+        </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+  </ion-app>
+  

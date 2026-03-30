@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+  user-select: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+.quiz-container {
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.quiz-container h1 {
+  font-size: 75px;
+  color: #fff;
+  font-weight: 850;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+span {
+  color: #007bff;
+}
+
+.timer {
+  font-size: 18px;
+  color: #ff0000;
+  margin-top: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  display: inline-block; /* Keeps it aligned properly without margin issues */
+  padding-right: 10px; /* Optional padding to avoid text getting too close to the edge */
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Poppins";
+}
+
+.score {
+  font-size: 18px;
+  color: #007bff;
+}
+
+.questions {
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.lb-header {
+  margin: 15px;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  padding: 7px;
+  background-color: #007bff;
+  text-align: center;
+  font-size: 17px;
+}
+.lb-btn {
+  --background: #6030ff;
+  border: none;
+  padding: 15px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lb-btn,
+ion-label {
+  letter-spacing: 0.8px;
+  font-weight: 350;
+}
+
+.user-records {
+  font-weight: 520;
+  font-size: 17px;
+  text-align: center;
+}
+.user-header {
+  font-family: 800;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+ion-title {
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  font-size: 23px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+}
+.categ-list {
+  margin-top: 15px;
+}
+
+.categ-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-color: #007bff;
+  font-size: 22px;
+  height: 45px;
+  padding: 15px;
+}
+.categ-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  letter-spacing: 0.1rem;
+  margin: 3px 3px;
+  font-weight: 120;
+  color: #fff;
+  --background: #6030ff;
+  margin-top: 55px;
+  margin-bottom: 25px;
+}
+.start-btn {
+  height: 55px;
+  width: 50%;
+  letter-spacing: 1.7px;
+  margin: 20px 5px;
+  text-transform: capitalize;
+  font-size: 17px;
+  font-weight: 450;
+  color: #fff;
+  font-family: "Poppins";
+  --background: #6030ff;
+}
+
+.question-container h3 {
+  font-weight: 550;
+  letter-spacing: 0.4px;
+  font-size: 19px;
+  font-family: "Poppins";
+  text-align: center;
+}
+
+.question-container ion-label {
+  font-weight: 350;
+  letter-spacing: 0.4px;
+}
+.paragraph-message {
+  color: #c0bebe; /* Light, modern text color */
+  font-size: 14px; /* Slightly larger for emphasis */
+  text-align: center; /* Align text to the center */
+  margin: 10px 45px 20px; /* Space between text and the button */
+  line-height: 1.5; /* Slightly increased line height */
+  letter-spacing: 1.4px;
+  font-family: "Poppins";
+}
+
+/* Style the ion-label with the 'label-radio' class */
+.label-radio {
+  font-weight: 800; /* Example: make text bold */
+  font-size: 16px; /* Example: change font size */
+  color: #000; /* Example: change text color */
+  padding: 8px; /* Example: add some padding */
+  background-color: #d8d4d4; /* Example: background color */
+  border-radius: 4px; /* Example: rounded corners */
+  letter-spacing: 0.6rem;
+  text-align: center;
+  margin: 5px;
+  font-family: "Poppins";
+}
+.quiz-radio {
+  display: none;
+  letter-spacing: 0.5rem;
+}
+
+.view-leaderboard {
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-family: "Poppins", sans-serif;
+}
+
+ion-icon {
+  transform: scale(1.8);
+  margin-right: 15px;
+}

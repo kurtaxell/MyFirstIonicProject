@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+*{
+  user-select: none;
+  font-family: sans-serif;
+  box-sizing: border-box; 
+}
+
+ h1 {
+  font-size: 45px;
+  color: #fff;
+  font-weight: 850;
+  text-transform: uppercase;
+  margin-top: 55px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+span{
+  color: #007bff;
+}
+
+.timer {
+  font-size: 18px;
+  color: #ff0000;
+  margin-top: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  display: inline-block;  /* Keeps it aligned properly without margin issues */
+  padding-right: 10px;    /* Optional padding to avoid text getting too close to the edge */
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.score {
+  font-size: 18px;
+  color: #007bff;
+}
+
+ion-label {
+  font-weight: bold;
+}
+
+.lb-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  padding: 7px;
+  background-color: #007bff;
+  font-size: 22px;
+  height: 45px;
+}
+
+.user-header{
+  font-weight: 650;
+   font-size: 20px;
+   text-align: center;
+   letter-spacing: 1.2px;
+   margin-top: 25px;
+   font-family: 'Poppins';
+ }
+.user-records{
+  font-weight: lighter;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Poppins';
+  letter-spacing: 0.7px;
+}
+
+h3{
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+}
+.back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  font-weight: 550;
+  font-size: 14px;
+  margin-top: -2px; /* slight lift for iOS look */
+  padding: 8px 12px; /* adds tap-friendly space */
+
+  /* Platform-specific adjustments */
+  ion-icon {
+    transform: translateY(-1px); /* aligns better with iOS and Android toolbar */
+    font-size: 30px; /* consistent size across platforms */
+  }
+
+  /* iOS platform */
+  ion-toolbar.ios & {
+    margin-top: -14px; /* slightly higher on iOS */
+  }
+
+  /* Android (Material Design) platform */
+  ion-toolbar.md & {
+    margin-top: 0; /* slightly lower on Android */
+  }
+}
+
+ion-button, .back-button{
+  text-transform: initial;
+  font-weight: 250;
+  font-size: 16px;
+}
+  ion-icon{
+    transform: scale(1.5);
+    color: #007bff;
+  }
+  
+  ion-title{
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    font-size: 23px;
+    text-align: center;
+    
+  }
+
+
+
